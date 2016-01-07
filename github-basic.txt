@@ -1,0 +1,4 @@
+HEAD: current edition
+reset version: git reset --hard commit_id;
+git log: history of commit;
+git reflog: history of command;
