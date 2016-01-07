@@ -1,4 +1,8 @@
+github: a distributed subversion control system
+svn: concerntrated subversion control system.
 HEAD: current edition
 reset version: git reset --hard commit_id;
 git log: history of commit;
 git reflog: history of command;
+
+if a local machin want to push their file to the remote(origin), we need a ssh to do that!
