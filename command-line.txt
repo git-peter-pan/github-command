@@ -14,3 +14,83 @@ cp:copy
 cp biopic/xx.txt drama/a.txt historical/
 cp * satire/ : "*" means wildcards, select all files in the working directory.
 cp m*.txt scifi/: select all files in the working directory starting with "m" and ending with ".txt";
+mv: move
+mv {what} {to}
+mv: also can be used to rename a file
+mv original_name new_name;
+
+rm: remove
+rm water.txt: remove a file
+rm -r comedy/: -r is an option that modifies the rm command, -r stands for "recursive" and its used to delete a directory and all of its child directories.
+CAUTIONS: it deletes the files and directories PERMANNENTLY! There isn't an undelete command.
+
+echo: 
+stdin: standard input: stdin
+stdout: standard output.
+stderr: standard error.
+
+echo "hello" > hello.txt:
+>: redirect a standard output to a file.
+"hello" is entered as the standard input
+cat hello.txt
+cat: concatnate, display 
+
+cat oceans.txt > continents.txt:
+> redict the output of oceans to overwrite continents.txt
+>: will overwrite the original content.
+>>: append
+
+<: takes the stdin from the file on the right, and input it into the program on the left
+
+| : pipe, command to command, out as input in left of pipe, use some command in the right.
+
+sort: sort to alphabetize a file.
+uniq: unique and filters out adjacent duplicate line in a file.
+sort xx.txt | uniq > uniq-deserts.txt
+
+grep: stands for global regular expression print.
+It searches filrs for lines that match a pattern and returns the results.
+It is also case sensitive.
+grep -i: enables the command to be case insensitive.
+
+grep -R: search all files in a directory and ouputs filenames and line containing matched results.
+-R: recursive
+-l: files with matches
+grep -Rl: ouput only filenames with matched results.
+
+sed: stream editor. It accepts stdin and modifies it based on an expression.
+find and replace.
+'s/snow/rain/': s stands for "substitution"; snow" the search string.
+rain: the replacement string.
+IMPORTANTLY, the above command will only replace the first instance of "snow" on a line.
+
+'s/snow/rain/g'; g means global. replaces it with "rain" globally.
+
+Enviorment:
+each time we launch the terminal application, it create a new session. 
+
+nano is a command line text editor. It works just like a destory text editor.
+~/.bash_profile is the name of file used to store environment settings. It is commonly caleld the "bash profile".
+~ represent the user's home directory
+. indicates a hidden file.
+source ~/.bash_profile: activates the changes in ~/.bash_profile for the current session.
+
+alias pd="pwd":
+alias allows you to create keyboard shorcuts, or aliaes for commonly used commands.
+history: print history of commands.
+
+export USER="Jane Doe"
+environment variables are variables that cen be used across commands and progrmas and hold information about the environment.
+
+USER="Jane Doe" set the enviroment variable USER to a name "Jane Doe". 
+export makes the variable to be available to all child sessions initiated from the session you are in.
+
+$ is always used when returning a variable's value.
+
+PS1 is a variable that defines the makeup and style of the command prompt.
+$HOME: path of home directory.
+PATH: stores a list of directories separated by a colon.
+
+bin/pwd: these script(pwd, ls) store in the /bin directory.
+env: stands for "environment", returns a list of the environment variables for the current user.
+
