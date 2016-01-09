@@ -1,0 +1,16 @@
+$: called shell prompt。 it appears when the terminal is ready to accept a command.
+ls: list the files and folders inside it.
+pwd: print working directory
+cd: change directory.
+mkdir: make directory
+touch: create a new file
+
+ls -a: also list the files and dicretories starting with a dot(.) which means hidden.
+ls -l: list all contents of a directory in long format.
+ls -t: order files and directories by
+ls -alt: multiple options
+
+cp:copy
+cp biopic/xx.txt drama/a.txt historical/
+cp * satire/ : "*" means wildcards, select all files in the working directory.
+cp m*.txt scifi/: select all files in the working directory starting with "m" and ending with ".txt";
